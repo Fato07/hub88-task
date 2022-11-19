@@ -2,12 +2,11 @@ import './App.css';
 
 import * as React from 'react'
 
-import CountryTable from './components/CountryTable';
+import CountryTable from './pages/CountryTable';
 
 function App() {
   return (
     <div className="App">
-      This is the county Table
       <CountryTable />
     </div>
   );
