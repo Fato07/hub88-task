@@ -1,12 +1,10 @@
-import './App.css';
-
-import * as React from 'react'
+import './sass/_app.scss';
 
 import CountryTable from './pages/CountryTable';
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <CountryTable />
     </div>
   );

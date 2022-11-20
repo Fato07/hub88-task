@@ -2,7 +2,7 @@ import DataTable, { TableColumn } from 'react-data-table-component'
 import { useMemo, useState } from 'react'
 
 import { ClipLoader } from 'react-spinners';
-import FilterComponent from '../components/FilterComponent';
+import Filter from '../components/Filter';
 import { QUERY_COUNTRIES_LIST } from '../query';
 import { useQuery } from '@apollo/client';
 
@@ -26,7 +26,7 @@ const CountryTable = () => {
         };
 
         return (
-            <FilterComponent onFilter={(e) => setFilterText(e.target.value)} onClear={handleClear} filterText={filterText} />
+            <Filter onFilter={(e) => setFilterText(e.target.value)} onClear={handleClear} filterText={filterText} />
         );
     }, [filterText, resetPaginationToggle]);
 
@@ -44,7 +44,7 @@ const CountryTable = () => {
     ];
 
     return (
-        <div>
+        <div className='table-container'>
             {loading ?
                 <ClipLoader
                 color="#000000"
