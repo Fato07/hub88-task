@@ -1,7 +1,7 @@
-import { BounceLoader, ClipLoader, GridLoader, MoonLoader } from 'react-spinners';
 import { CSSProperties, useMemo, useState } from 'react'
 import DataTable, { TableColumn } from 'react-data-table-component'
 
+import { BounceLoader } from 'react-spinners';
 import Filter from '../components/Filter';
 import { QUERY_COUNTRIES_LIST } from '../query';
 import { useQuery } from '@apollo/client';
@@ -13,7 +13,7 @@ const override: CSSProperties = {
   
 const CountryTable = () => {
 
-    const { data, loading, error } = useQuery(QUERY_COUNTRIES_LIST);
+    const { data, loading } = useQuery(QUERY_COUNTRIES_LIST);
     const [filterText, setFilterText] = useState('')
     const [resetPaginationToggle, setResetPaginationToggle] = useState(false);
 
